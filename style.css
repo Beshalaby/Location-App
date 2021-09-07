@@ -1,0 +1,73 @@
+*{
+  margin:0px;
+  padding:0px;
+}
+body{
+  width: 100%;
+  height: 100%;
+  font-family: 'Ubuntu', sans-serif;
+  background-color: 
+}
+#map{
+  height:105%;
+  width: 100%;  
+  position: absolute;
+  top: 0px;
+  z-index: -10;
+}
+nav{
+  color: white;
+  z-index: 10;
+  overflow: hidden;
+}
+.navClass{
+  display: flex;
+  flex-direction:row-reverse;
+  margin: 3%;
+  width: 30%;
+  float: right;
+  
+}
+.navItem{
+  margin-left: 10%;
+}
+.logo{
+  width: 10%;
+  float: left;
+  margin:3%;
+  color: linear-gradient(#FFA600, yellow);
+}
+.intro{
+  width: 35%;
+  margin-left: 10%;
+  margin-top: 5%;
+  min-height: 400px;
+  float: left;
+  background:whitesmoke;
+  position: relative;
+  border-radius: 27%;
+  justify-content: center;
+}
+.introText{
+  text-align: center;
+  margin-top: 10%;
+}
+#searchBar{
+  background: #FFA600;
+  border:none;
+  align-self: center;
+  margin-left: 15%;
+  width: 65%;
+  height: 50px;
+  border-radius: 20px;
+  margin-top: 15%;
+  float: left;
+}
+::placeholder{
+  color:white;
+}
+#searchIcon{
+  max-width:15%;
+  height:auto;
+  margin-top: 12%;
+}
