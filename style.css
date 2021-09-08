@@ -62,6 +62,7 @@ nav{
   border-radius: 20px;
   margin-top: 15%;
   float: left;
+  outline: none;
 }
 ::placeholder{
   color:white;
