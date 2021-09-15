@@ -1,5 +1,4 @@
-![Image of logo]
-(https://github.com/Beshalaby/Location-App/blob/main/pictures/logo1.png)
+![Image of logo](./pictures/logo1.png)
 
 *maxmind* is an application that allows users to find and explore tourist destinations in MD District 6 and the surrounding area. Users would be able to take virtual tours of the landmarks in the area or find new locations to tour in-person.
 
