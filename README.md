@@ -4,6 +4,12 @@
 
 As of September 2021, *maxmind* is still in early development.
 
+# Inspiration
+
+This is our Congressional App Challenge project.
+
+Popular GPS applications like Google Maps
+
 ## FAQ
 These are the most common questions we have been asked:
 
