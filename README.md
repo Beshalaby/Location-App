@@ -4,7 +4,7 @@
 
 As of September 2021, *maxmind* is still in early development.
 
-##FAQ
+## FAQ
 These are the most common questions we have been asked:
 
 ||*What is the intended audience of maxmind?*
