@@ -1,6 +1,6 @@
 ![Image of logo](./pictures/logo1.png)
 
-Hello hunter my phone and computer were taken away lol i might continue of codesandbox.io cuz i had a pretty recent commit 😳
+#Hello hunter my phone and computer were taken away lol i might continue of #codesandbox.io cuz i had a pretty recent commit 😳
 
 *maxmind* is an application that allows users to find and explore tourist destinations in MD District 6 and the surrounding area. Users would be able to take virtual tours of the landmarks in the area or find new locations to tour in-person.
 
