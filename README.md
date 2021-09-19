@@ -18,3 +18,7 @@ These are the most common questions we have been asked:
 || *What is the intended audience of maxmind?*
 
 *maxmind* serves a dual purpose of educating students about the cultural significance of MD District 6 and introducing new locations for tourists.
+
+|| *What did you use to build maxmind?*
+
+*maxmind* was built with Javascript, Google Maps API, & Three.js.
