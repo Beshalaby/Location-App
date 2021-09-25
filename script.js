@@ -1,4 +1,4 @@
- var map;
+var map;
 var marker
 
 function initMap () {
@@ -26,12 +26,13 @@ function addMarker (coords, title, popup) {
 marker.addListener('click', function () {
   document.getElementById("hi").innerHTML=popup;
   ///////////////////////
-  document.getElementsByClassName("intro")[0].style.animation= "growBox 1s steps(60) 1";
+  document.getElementsByClassName("intro")[0].style.animation= "growBox 0.5s steps(60) 1";
   document.getElementsByClassName("intro")[0].style.animationName= "growBox";
   document.getElementsByClassName("intro")[0].style.animationFillMode="forwards";
   document.getElementsByClassName("search")[0].style.display="none";
   document.getElementsByClassName("searchIcon")[0].style.display="none";
   document.getElementsByClassName("introText")[0].style.display="none";
+  document.getElementById("backArrow")[0].style.display="block";
  
 })
 
