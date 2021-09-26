@@ -75,7 +75,7 @@ body::-webkit-scrollbar {
 }
 
 .sidebar.active #sidebarButton{
-  left: 90%;
+  left: 85%;
 }
 
 .sidebar.active .itemName{
@@ -173,7 +173,7 @@ nav{
   margin-top: 10%;
   min-height: 30vh;
   float: left;
-  background:#D3FBD8;
+  background:#C8FCEA;
   position: relative;
   border-radius: 27%;
   justify-content: center;
@@ -184,7 +184,7 @@ nav{
   margin-top: 10%;
 }
 #searchBar{
-  background: white;
+  background: #f5fffc;
   border:none;
   align-self: center;
   margin-left: 15%;
@@ -194,9 +194,10 @@ nav{
   margin-top: 15%;
   float: left;
   outline: none;
+  text-align: center;
 }
 ::placeholder{
-  color:white;
+  color:rgb(148, 148, 148);
 }
 #searchIcon{
   max-width:15%;

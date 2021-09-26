@@ -1,3 +1,11 @@
+*{
+    margin:0px;
+    padding:0px;
+  }
+  body{
+    font-family: 'Ubuntu', sans-serif;
+  }
+
 h5 {
     text-align: center;  
     color: #419428;
@@ -35,3 +43,113 @@ img {
   margin-left: auto;
   margin-right: auto;
 }
+
+.sidebar{
+    height: 100%;
+    width: 50px;
+    background: #616161;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 6px 14px;
+    transition:all 0.5s ease;
+  }
+  
+  .sidebar.active{
+    width: 200px;
+  
+  }
+  
+  .sidebar .logoContent .sidebarLogo{
+    color: white;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .sidebar.active .logoContent .sidebarLogo{
+    opacity: 1;
+    pointer-events: none;
+  }
+  
+  .sidebar .logoContent i{
+    font-size: 35px;
+  }
+  .logoText{
+    font-size: 28px;
+  }
+  
+  #sidebarButton{
+    color: white;
+    position: absolute;
+    top: 6px;
+    left: 55%;
+    font-size: 20px;
+    height:50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    transform: translateX(-50%);
+  }
+  
+  .sidebar.active #sidebarButton{
+    left: 85%;
+  }
+  
+  .sidebar.active .itemName{
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .sidebar .itemName{
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .sidebar ul{
+    margin-top: 10%;
+  }
+  .sidebar ul li{
+    height:50px;
+    position: relative;
+    width: 100%;
+    list-style: none;
+    margin: 0 5px;
+    line-height: 50px;
+    text-align: center;
+  }
+  
+  
+  .sidebar ul li a{
+    color: white;
+    display: flex;
+    align-items:center;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    border-radius: 12px;
+  }
+  
+  .sidebar ul li a:hover{
+    background:white;
+    color: #11101d
+  }
+  
+  #sidebarButton{
+    color: #00C6CF;
+    transition: all 0.5s ease;
+    border-radius: 12px;
+  }
+  
+  #sidebarButton:hover{
+    background:white;
+    color: #11101d
+  }
+  
+  .sidebar ul li a i{
+    height: 50px;
+    min-width: 50px;
+    border-radius: 12px;
+    line-height: 50px;
+  }
