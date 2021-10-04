@@ -55,5 +55,12 @@ addMarker({lat:39.5417934, lng:-79.1468621}, "Savage River State Forest", "Savag
 addMarker({lat:39.3867783, lng:-79.2675514}, "Potomac State Forest", "Potomac State Forest is an 11,535-acre state forest made of mountain forests, streams, and valleys. The forest offers a wide range of outdoor recreation opportunities, such as cross-country skiing, camping, fishing, hiking, and hunting.\n<a href='https://dnr.maryland.gov/forests/Pages/publiclands/western_potomacgarrettforest.aspx'>Website<a/a>");
 addMarker({lat:39.6386001,lng:-78.4651611}, "Green Ridge State Forest", "At 49,000 acres, Green Ridge is the largest contiguous block of public land in Maryland. Green Ridge is located within the Ridge and Valley Province of the Appalachian Mountains. It is rich in both natural and cultural heritage and remains a “working forest” today as it is managed by the Maryland Department of Natural Resources Forest Service to conserve the natural ecological processes while supporting the economy of the region through an active forest management program.\n<a href='https://dnr.maryland.gov/forests/pages/publiclands/western_greenridgeforest.aspx'>Website<a/a>");
 addMarker({lat:39.590799, lng:-77.7154694,}, "The Hagerstown Culture Trail", "The Hagerstown Cultural Trail connects two of our city’s most popular destinations -the downtown Arts & Entertainment District with City Park and the Washington County Museum of Fine Arts. The trail offers public art experiences, gathering spaces, kayaking, and other amenities along the way.\n<a href='https://hagerstownculturaltrail.com/'>Website<a/a>");
+addMarker({lat:39.2848863, lng:-77.7315204}, "Harpers Ferry National Historical Park", "test");
+addMarker({lat:39.1414683, lng:-78.5108801}, "Gettysburg National Military Park Museum and Visitor Center", "");
+addMarker({lat:39.512624, lng:-78.0780206}, "The Farnham Colossi", "");
+addMarker({lat:39.3327311, lng:-77.8802588}, "Miller House", "");
+addMarker({lat:39.6385051, lng:-77.7202006}, "Discovery Station At Hagerstown Inc", "");
+addMarker({lat:39.6357782, lng:-77.7256609}, "Mansion House Art Center (Home of the Valley Art Association)", "");
+addMarker({lat:39.2967454, lng:-77.7067049}, "John Brown Wax Museum", "");
 
 }
