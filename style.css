@@ -220,17 +220,19 @@ nav{
   }
 
   50% {
-    width: 90%;
-    height:90%;
-    margin:0%;
+    width: 30%;
+    height:100%;
+    margin:0 0 0 3%;
+    /*margin-left: 10%;*/
     border-radius: 5%;
   }
 
   100% {
-    width: 100%;
+    width: 45%;
     height:100%; 
     position: absolute;
-    margin:0%;
+    /*margin-left: 10%;*/
+    margin:0 0 0 5%;
     border-radius: 0%;
     background-color: white;
   }
@@ -264,4 +266,12 @@ nav{
 
 #hi{
   font-size: 100%
+}
+
+#landmarkImage{
+  margin-left: 70%;
+  margin-top: 10%;
+  position: fixed;
+  width: 20px;
+  height: auto;
 }
