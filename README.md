@@ -4,6 +4,8 @@
 
 As of September 2021, *maxmind* is still in early development.
 
+Check out the site here! https://beshalaby.github.io/maxmind/
+
 # Inspiration
 
 This is our Congressional App Challenge project.
