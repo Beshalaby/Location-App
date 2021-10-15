@@ -3,6 +3,7 @@
   padding:0px;
 }
 body{
+  @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@900&display=swap');
   font-family: 'Ubuntu', sans-serif;
 }
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -175,9 +176,10 @@ nav{
   float: left;
   background:#C8FCEA;
   position: relative;
+  font-family: 'Raleway', sans-serif;
   border-radius: 27%;
   justify-content: center;
-  
+  z-index: -1;
 }
 .introText{
   text-align: center;
@@ -224,6 +226,7 @@ nav{
     height:100%;
     margin:0 0 0 3%;
     /*margin-left: 10%;*/
+    padding-left: 10px;
     border-radius: 5%;
   }
 
@@ -232,6 +235,7 @@ nav{
     height:100%; 
     position: absolute;
     /*margin-left: 10%;*/
+    padding-left: 10px;
     margin:0 0 0 5%;
     border-radius: 0%;
     background-color: white;
