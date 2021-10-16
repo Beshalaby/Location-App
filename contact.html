@@ -1,39 +1,102 @@
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
+<html>
+    <head>
+        <title>Contact Form Tutorial by Bootstrapious.com</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+        <link href='custom.css' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
 
-<section id="contact">
-  <div class="container">
-    <div class="well well-sm">
-      <h3><strong>Contact Us</strong></h3>
-    </div>
-	
-	<div class="row">
-	  <div class="col-md-7">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49161.16371857324!2d-77.75772288430984!3d39.636823241887456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c9ed151481dfdd%3A0x65f2620826df7239!2sHagerstown%2C%20MD!5e0!3m2!1sen!2sus!4v1634314047359!5m2!1sen!2sus" width="100%" height="315" frameborder="0" style="border:0" allowfullscreen></iframe>
-      </div>
+        <div class="container">
 
-      <div class="col-md-5">
-          <h4><strong>Get in Touch</strong></h4>
-        <form>
-          <div class="form-group">
-            <input type="text" class="form-control" name="" value="" placeholder="Name">
-          </div>
-          <div class="form-group">
-            <input type="email" class="form-control" name="" value="" placeholder="E-mail">
-          </div>
-          <div class="form-group">
-            <input type="tel" class="form-control" name="" value="" placeholder="Phone">
-          </div>
-          <div class="form-group">
-            <textarea class="form-control" name="" rows="3" placeholder="Message"></textarea>
-          </div>
-          <button class="btn btn-default" type="submit" name="button">
-              <i class="fa fa-paper-plane-o" aria-hidden="true"></i> Submit
-          </button>
-        </form>
-      </div>
+            <div class="row">
+
+                <div class="col-xl-8 offset-xl-2 py-5">
+
+                    <h1>Contact Form</h1>
+
+                    <p class="lead">Fill out this short form to reach our dedicated team.</p>
+
+                    <!-- We're going to place the form here in the next step -->
+                    <form id="contact-form" method="post" action="contact.php" role="form">
+
+    <div class="messages"></div>
+
+    <div class="controls">
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="form_name">First name *</label>
+                    <input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your first name *" required="required" data-error="Firstname is required.">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="form_lastname">Last name *</label>
+                    <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Please enter your last name *" required="required" data-error="Lastname is required.">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="form_email">Email *</label>
+                    <input id="form_email" type="email" name="email" class="form-control" placeholder="Please enter your email *" required="required" data-error="Valid email is required.">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="form_need">Topic *</label>
+                    <select id="form_need" name="need" class="form-control" required="required" data-error="Please specify your need.">
+                        <option value=""></option>
+                        <option value="Request landmark">Request quotation</option>
+                        <option value="Report bug">Request order status</option>
+                        <option value="Leave review">Request copy of an invoice</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="form_message">Message *</label>
+                    <textarea id="form_message" name="message" class="form-control" placeholder="Start typing... " rows="4" required="required" data-error="Please, leave us a message."></textarea>
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <input type="submit" class="btn btn-success btn-send" value="Send message">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <p class="text-muted">
+                    <strong>*</strong> These fields are required. Contact form  by
+                    <a href="https://bootstrapious.com/p/how-to-build-a-working-bootstrap-contact-form" target="_blank">maxmind</a>.</p>
+            </div>
+        </div>
     </div>
-  </div>
-</section>
+
+</form> 
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js" integrity="sha256-dHf/YjH1A4tewEsKUSmNnV05DDbfGN3g7NMq86xgGh8=" crossorigin="anonymous"></script>
+        <script src="contact.js"></script>
+    </body>
+</html>
