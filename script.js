@@ -11,11 +11,11 @@ function initMap () {
 
   }
 
-  map=new google.maps.Map(document.getElementById("map"), mapOptions);
+  map = new google.maps.Map(document.getElementById("map"), mapOptions);
 
 
 //function to add marker
-function addMarker (coords, title, popup, image) {
+function addMarker (coords, title, description, image) {
   marker = new google.maps.Marker({
     position: coords,
     title: title,
@@ -24,7 +24,7 @@ function addMarker (coords, title, popup, image) {
   marker.setMap(map)
 
 marker.addListener('click', function () {
-  document.getElementById("hi").innerHTML=popup;
+  document.getElementById("hi").innerHTML=description;
   document.getElementById("landmarkImage").innerHTML=image;
   ///////////////////////
   document.getElementsByClassName("intro")[0].style.animation= "growBox 0.5s steps(60) 1";
