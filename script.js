@@ -1,8 +1,9 @@
 var map;
-var marker
+var marker;
+var mapOptions;
 
 function initMap () {
-  var mapOptions = {
+  mapOptions = {
     zoom: 7,
     center: {lat:38.725114, lng:-80.767577},
     mapId: "8db54dfb3396357e",
@@ -15,7 +16,7 @@ function initMap () {
 
 
 //function to add marker
-function addMarker (coords, title, description, image) {
+function addMarker (coords, title, description, image, nearby) {
   marker = new google.maps.Marker({
     position: coords,
     title: title,
@@ -23,9 +24,35 @@ function addMarker (coords, title, description, image) {
 });
   marker.setMap(map)
 
+  function offsetCenter(latlng, offsetx, offsety) {
+
+    // latlng is the apparent centre-point
+    // offsetx is the distance you want that point to move to the right, in pixels
+    // offsety is the distance you want that point to move upwards, in pixels
+    // offset can be negative
+    // offsetx and offsety are both optional
+
+    var scale = Math.pow(2, map.getZoom());
+
+    var worldCoordinateCenter = map.getProjection().fromLatLngToPoint(latlng);
+    var pixelOffset = new google.maps.Point((offsetx/scale) || 0,(offsety/scale) ||0);
+
+    var worldCoordinateNewCenter = new google.maps.Point(
+        worldCoordinateCenter.x - pixelOffset.x,
+        worldCoordinateCenter.y + pixelOffset.y
+    );
+
+    var newCenter = map.getProjection().fromPointToLatLng(worldCoordinateNewCenter);
+
+    map.setCenter(newCenter);
+
+}
+
 marker.addListener('click', function () {
   document.getElementById("hi").innerHTML=description;
   document.getElementById("landmarkImage").innerHTML=image;
+  document.getElementById("landmarkTitle").innerHTML=title;
+  document.getElementsById("nearby").innerHTML=nearby;
   ///////////////////////
   document.getElementsByClassName("intro")[0].style.animation= "growBox 0.5s steps(60) 1";
   document.getElementsByClassName("intro")[0].style.animationName= "growBox";
@@ -33,7 +60,15 @@ marker.addListener('click', function () {
   document.getElementsByClassName("search")[0].style.display="none";
   document.getElementsByClassName("searchIcon")[0].style.display="none";
   document.getElementsByClassName("introText")[0].style.display="none";
+  document.getElementsByClassName("infoButtons").style.display="block";
   
+
+  //map.setZoom(18);
+  //map.setCenter(marker.position);
+  //map.panBy(-300, 10);
+  /*mapOptions = {
+    mapTypeId: google.maps.MapTypeId.SATELLITE,
+  }*/
  
 })
 
@@ -49,7 +84,7 @@ function link(text, link) {
 
 //to add images copy the relative link of the image and put it inbetween the src tags '<img src="(This Part)">' !1!1! i added the image part at the end of the function landmarks
 //rember to use / forward and not backward ones and start it with ./
-addMarker({lat:39.4687493, lng:-77.740981}, "Antietam National Battlefield", "Antietam National Battlefield is a National Park along Antietam Creek. There are over 100 buildings, monuments, and demonstrations that commemorate the Civil War Battle of Antietam. The Battle of Antietam was the bloodiest day in American history, with 23,000 soldiers killed, wounded or missing after twelve hours of savage combat on September 17, 1862. The Battle of Antietam ended the Confederate Army of Northern Virginia's first invasion into the North and led Abraham Lincoln to issue the preliminary Emancipation Proclamation. Visitors can provide input on the park's future, visit the theater and museum, hike around the park, picnic, volunteer, and watch cannon demonstrations. <a href='https://www.nps.gov/anti/index.htm'>Website</a>", '<img src="./pictures/landmark images/Antietam Battlefield.jpg">');
+addMarker({lat:39.4687493, lng:-77.740981}, "Antietam National Battlefield", "Antietam National Battlefield is a National Park along Antietam Creek. There are over 100 buildings, monuments, and demonstrations that commemorate the Civil War Battle of Antietam. The Battle of Antietam was the bloodiest day in American history, with 23,000 soldiers killed, wounded or missing after twelve hours of savage combat on September 17, 1862. The Battle of Antietam ended the Confederate Army of Northern Virginia's first invasion into the North and led Abraham Lincoln to issue the preliminary Emancipation Proclamation. Visitors can provide input on the park's future, visit the theater and museum, hike around the park, picnic, volunteer, and watch cannon demonstrations. <a id='sideImage' href='https://www.nps.gov/anti/index.htm'>Website</a>", '<img src="./pictures/landmark images/Antietam Battlefield.jpg">', '<h1 id="nearbyTitle">Some Nearby Places to Visit Include! </h1> <ul id="nearbyList"> <li>Washington Monument</li> <li>Maryland Heights</li> <li>Cacapon Mountain Overlook</li> <li>Annapolis Rock</li> <li>Crystal Grottoes Caverns</li </ul> ');
 addMarker({lat:39.445894, lng:-77.8433811}, "Washington Monument (Boonsboro, MD)", "This Washington Monument in Boonsboro was the first monument dedicated to George Washington. This State Park includes a museum, picknicking facilities, and access to the Appalachian Trail.\n<a href='https://dnr.maryland.gov/publiclands/pages/western/washington.aspx'>Website</a>", '<img src="./pictures/landmark images/Washington Monument.jpg">');
 addMarker({lat:39.257259, lng:-77.6316552}, "Maryland Heights", "The Maryland Heights Trail offers hikers the opportunity to see many aspects of Harpers Ferry NHP on one walk: spectacular scenery, geology, Civil War, industrial, and transportation history.\n<a href='https://www.nps.gov/hafe/planyourvisit/maryland-heights-trail.htm'>Website<a/a>", '<img src="">');
 addMarker({lat:39.4708927, lng:-78.3459939}, "Cacapon Mountain Overlook", "Cacapon Mountain Overlook is a spectacular view, the highest elevation in the eastern panhandle. The site offers a view of four states, along with a Naturalist that provides a brief history of the park and the sight of migrating hawks and butterflies. There are hiking trails, riding stables and golf at Cacapon, plus a great restaurant and rocking chairs on the veranda to sit a spell and relax.\n<a href='https://wvstateparks.com/park/cacapon-resort-state-park/'>Website<a/a>", '<img src="">');
