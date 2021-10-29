@@ -52,7 +52,7 @@ marker.addListener('click', function () {
   document.getElementById("hi").innerHTML=description;
   document.getElementById("landmarkImage").innerHTML=image;
   document.getElementById("landmarkTitle").innerHTML=title;
-  document.getElementsById("nearby").innerHTML=nearby;
+  document.getElementById("nearby").innerHTML=nearby;
   ///////////////////////
   document.getElementsByClassName("intro")[0].style.animation= "growBox 0.5s steps(60) 1";
   document.getElementsByClassName("intro")[0].style.animationName= "growBox";
@@ -60,7 +60,9 @@ marker.addListener('click', function () {
   document.getElementsByClassName("search")[0].style.display="none";
   document.getElementsByClassName("searchIcon")[0].style.display="none";
   document.getElementsByClassName("introText")[0].style.display="none";
-  document.getElementsByClassName("infoButtons").style.display="block";
+  document.getElementsByClassName("buttons")[0].style.visibility='visible';
+  document.getElementsByClassName("buttons")[1].style.visibility='visible';
+  document.getElementsByClassName("buttons")[2].style.visibility='visible';
   
 
   //map.setZoom(18);

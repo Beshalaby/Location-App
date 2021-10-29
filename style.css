@@ -173,6 +173,7 @@ nav{
   margin-left: 10%; /*make 10% */
   margin-top: 10%;
   min-height: 30vh;
+  height: 35vh;
   float: left;
   background:#C8FCEA;
   position: relative;
@@ -271,20 +272,20 @@ nav{
 #hi{
   font-size: 100%;
   margin-top:10%;
-  margin-left: 3%;
+  margin-left: 7%;
   margin-right: 3%;
-  width: 40%;
+  width: 80%;
   float: left;
 }
 
 #nearby{
   font-size: 100%;
-  margin-top:8%;
+  margin-top:45%;
   margin-right: 3%;
+  margin-left: 10%;
   width: 40%;
-  float: right;
   /*display: none;*/
-  display: none;
+  
 }
 
 #nearbyTitle{
@@ -313,7 +314,9 @@ nav{
 #landmarkTitle{
   margin-left: 15%;
   margin-top: 5%;
+  color: rgb(97, 97, 97);
 }
+
 
 .buttons{
   position: fixed;
@@ -327,13 +330,15 @@ nav{
   font-size: 16px;
   transition-duration: 0.4s;
   cursor: pointer;
-  /*display: none;*/display: none;
+  /*display: none;*/
+  visibility:hidden;
 }
 .button1 {
   background-color: white; 
   color: black; 
   border: 2px solid #4CAF50;
-  margin-left: 10%;
+  margin-top: 25%;
+  margin-left: 32%;
 }
 
 .button1:hover {
@@ -345,7 +350,8 @@ nav{
   background-color: white; 
   color: black; 
   border: 2px solid #008CBA;
-  margin-left: 20%;
+  margin-top:30%;
+  margin-left: 30%;
 }
 
 .button2:hover {
@@ -355,9 +361,10 @@ nav{
 
 .button3 {
   background-color: white; 
-  margin-left: 33%;
+  margin-top: 35%;
   color: black; 
   border: 2px solid #f44336;
+  margin-left: 29%;
 }
 
 .button3:hover {
